@@ -108,7 +108,7 @@
           <div class="card-tools">
             <div class="input-group input-group-sm">
               <div>
-                <a class="btn btn-primary" style="width: 100%;background-color:deeppink;border-color:deeppink;" href="nuevo.php">+ Agregar nuevo</a>
+                <a class="btn btn-primary" style="width: 100%" class="btn btn-danger" href="nuevo.php">+ Agregar nuevo</a>
               </div>
             </div>
           </div>
