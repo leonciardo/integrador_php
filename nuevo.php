@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+    
     <div class="container">
         <h2>Nuevo producto</h2>
-        <form method="POST" action="guardar.php" class="form-horizontal">
+        <form method="POST" action="guardar.php" class="form-horizontal" enctype= "multipart/form-data">
 
             <div class="form-group">
                 <label class="control-label col-sm-2" for="producto">Producto:</label>
@@ -34,15 +35,16 @@
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-2" for="imagen">Imagen:</label>
+                <label class="control-label col-sm-2" for="archivo">Imagen:</label>
                 <div class="col-sm-10">
-                    <input type="text" name="imagen" class="form-control" id="imagen" placeholder="Suba una imagen">
+                    <input type="file" name="archivo" class="form-control-ggb  form-control" id="archivo" placeholder="Suba una imagen" accept ="image/jpeg">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="index.php" class="btn btn-primary">Cancelar</a>
                 </div>
             </div>
         </form>

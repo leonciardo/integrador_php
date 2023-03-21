@@ -20,7 +20,7 @@ $reg  = $registro->fetch_assoc();
 <body>
     <div class="container">
         <h2>Editar producto</h2>
-        <form method="POST" action="actualizar.php" class="form-horizontal">
+        <form method="POST" action="actualizar.php" class="form-horizontal" enctype= "multipart/form-data">
             <input hidden value="<?php echo $reg['id'];?>" readonly name = 'id' >
 
             <div class="form-group">
@@ -46,15 +46,16 @@ $reg  = $registro->fetch_assoc();
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-2" for="imagen">Imagen:</label>
+                <label class="control-label col-sm-2" for="archivo">Imagen:</label>
                 <div class="col-sm-10">
-                    <input type="text" name="imagen" class="form-control" id="imagen" placeholder="Suba una imagen">
+                    <input type="file" name="archivo" class="form-control" id="archivo" placeholder="Suba una imagen" accept ="image/jpeg">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="index.php" class="btn btn-primary">Cancelar</a>
                 </div>
             </div>
         </form>

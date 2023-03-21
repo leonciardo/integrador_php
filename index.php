@@ -74,18 +74,10 @@
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="nuevo.php" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
                 <p>
-                  Menu 1
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-plus"></i>
-                <p>
-                  Menu 2
+                  Crear nuevo
                 </p>
               </a>
             </li>
@@ -120,6 +112,7 @@ $conexion = conexiondb();
 $registros = $conexion->query("SELECT * FROM stock");
 ?>
 
+
 <table class="table">
   <thead>
     <tr>
@@ -138,7 +131,9 @@ $registros = $conexion->query("SELECT * FROM stock");
         <td><?php echo $registro['producto']; ?></td>
         <td><?php echo $registro['cantidad']; ?></td>
         <td><?php echo $registro['precio']; ?></td>
-        <td><?php echo $registro['imagen']; ?></td>
+        <td><img src="imagenes/<?php echo $registro['imagen']; ?>" width="100"></td>
+
+
         <td>
           <a class="btn btn-danger" href="eliminar.php?id=<?php echo $registro['id']; ?>">Eliminar</a>
           <a class="btn btn-primary" href="editar.php?id=<?php echo $registro['id']; ?>">Editar</a>
@@ -148,7 +143,6 @@ $registros = $conexion->query("SELECT * FROM stock");
     <?php endwhile; ?>
   </tbody>
 </table>
-
     </div>
 
   </div>
